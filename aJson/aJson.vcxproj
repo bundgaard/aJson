@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,23 +128,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="IJsonArray.h" />
+    <ClInclude Include="IJsonObject.h" />
     <ClInclude Include="Json.h" />
     <ClInclude Include="JsonArray.h" />
-    <ClInclude Include="JsonNull.h" />
-    <ClInclude Include="JsonNumber.h" />
     <ClInclude Include="JsonObject.h" />
-    <ClInclude Include="JsonString.h" />
     <ClInclude Include="JsonValue.h" />
     <ClInclude Include="Lexer.h" />
     <ClInclude Include="Token.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="IJsonArray.cpp" />
+    <ClCompile Include="IJsonObject.cpp" />
     <ClCompile Include="JsonArray.cpp" />
-    <ClCompile Include="JsonNull.cpp" />
-    <ClCompile Include="JsonNumber.cpp" />
     <ClCompile Include="JsonObject.cpp" />
-    <ClCompile Include="JsonString.cpp" />
     <ClCompile Include="JsonValue.cpp" />
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="Token.cpp" />

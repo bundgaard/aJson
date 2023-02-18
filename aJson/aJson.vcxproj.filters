@@ -13,24 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{3b2533fc-404e-4c29-83c3-b161bc5590e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lexer Source">
+      <UniqueIdentifier>{2be2c285-e87e-4904-a5ca-d5441ce3ed8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lexer Header">
+      <UniqueIdentifier>{307f3ab6-912d-4123-bcab-589a025354fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Lexer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Token.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="JsonValue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="JsonString.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="JsonNumber.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="JsonNull.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="JsonObject.h">
@@ -42,33 +36,42 @@
     <ClInclude Include="Json.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Lexer.h">
+      <Filter>Lexer Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Token.h">
+      <Filter>Lexer Header</Filter>
+    </ClInclude>
+    <ClInclude Include="IJsonObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IJsonArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Lexer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Token.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="JsonValue.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="JsonString.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="JsonNumber.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="JsonNull.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="JsonObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="JsonArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Lexer.cpp">
+      <Filter>Lexer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Token.cpp">
+      <Filter>Lexer Source</Filter>
+    </ClCompile>
+    <ClCompile Include="IJsonObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IJsonArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

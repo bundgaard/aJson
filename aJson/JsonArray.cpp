@@ -17,3 +17,13 @@ size_t JsonArray::size()
 {
 	return m_items.size();
 }
+
+JsonValue JsonArray::operator[](int i)
+{
+	return m_items[i];
+}
+
+void JsonArray::Foo()
+{
+	std::cout << "Coca Cola\n";
+}

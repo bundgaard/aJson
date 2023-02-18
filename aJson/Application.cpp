@@ -7,6 +7,7 @@
 
 using namespace std;
 using TokenType = Token::Type;
+
 int main()
 {
 	vector<Token> tokens{
@@ -24,12 +25,47 @@ int main()
 	}
 
 	JsonObject obj{};
-	obj.add(JsonString{ "key1" }, JsonString{ "foo" });
-	obj.add(JsonString{ "key2" }, JsonString{ "foo" });
+	obj.add("key1", JsonValue{ std::string{ "foo" } });
+	obj.add("key2", JsonValue{ std::string{"foo"} });
 	obj << cout;
+	JsonArray arr1{};
 
 	JsonArray arr{};
-	arr.add(JsonString{ "foo" }, JsonString{ "bar" }, JsonString{ "baz" });
+	arr.add({
+		JsonValue{ std::string{"foo"} },
+		JsonValue{ 2.0f },
+		JsonValue{ true},
+		JsonValue{ std::make_shared<JsonObject>(obj) },
+		JsonValue{ std::make_shared<JsonArray>(arr1) },
+		}); // TODO implement iterator for our JsonValue container
+	std::cout << "Array size " << arr.size() << "\n";
+	if (arr[0].asBool().has_value())
+	{
+		std::cout << "arr[0] has bool" << "\n";
+	}
 
-	arr.add()
+	if (arr[0].asNumber().has_value())
+	{
+		std::cout << "arr[0] has number" << "\n";
+	}
+
+	if (arr[0].asString().has_value())
+	{
+		std::cout << "arr[0] has string" << "\n";
+		std::cout << arr[0].asString().value().c_str() << "\n"; // TODO: override () operator to simplify this
+	}
+
+
+	if (arr[2].asObject().has_value())
+	{
+		std::cout << "arr[2] has object\n";
+		arr[2].asObject().value().get()->Baz();
+	}
+
+	if (arr[3].asArray().has_value())
+	{
+		std::cout << "arr[3] has array\n";
+		arr[3].asArray().value().get()->Foo();
+	}
+
 }
